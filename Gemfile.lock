@@ -84,6 +84,7 @@ GEM
     brakeman (7.1.1)
       racc
     builder (3.3.0)
+    coderay (1.1.3)
     concurrent-ruby (1.3.5)
     connection_pool (2.5.4)
     crass (1.0.6)
@@ -105,6 +106,15 @@ GEM
       raabro (~> 1.4)
     globalid (1.3.0)
       activesupport (>= 6.1)
+    hamlit (4.0.0)
+      temple (>= 0.8.2)
+      thor
+      tilt
+    hamlit-rails (0.2.3)
+      actionpack (>= 4.0.1)
+      activesupport (>= 4.0.1)
+      hamlit (>= 1.2.0)
+      railties (>= 4.0.1)
     i18n (1.14.7)
       concurrent-ruby (~> 1.0)
     io-console (0.8.1)
@@ -142,6 +152,7 @@ GEM
       net-pop
       net-smtp
     marcel (1.1.0)
+    method_source (1.1.0)
     mini_mime (1.1.5)
     minitest (5.26.0)
     msgpack (1.8.0)
@@ -179,6 +190,12 @@ GEM
       actionpack (>= 7.0.0)
       activesupport (>= 7.0.0)
       rack
+    pry (0.15.2)
+      coderay (~> 1.1)
+      method_source (~> 1.0)
+    pry-doc (1.6.0)
+      pry (~> 0.11)
+      yard (~> 0.9.11)
     psych (5.2.6)
       date
       stringio
@@ -263,6 +280,9 @@ GEM
       rubocop-rails (>= 2.30)
     ruby-progressbar (1.13.0)
     securerandom (0.4.1)
+    simple_form (5.4.0)
+      actionpack (>= 7.0)
+      activemodel (>= 7.0)
     solid_cable (3.0.12)
       actioncable (>= 7.2)
       activejob (>= 7.2)
@@ -289,9 +309,11 @@ GEM
     stimulus-rails (1.3.4)
       railties (>= 6.0.0)
     stringio (3.1.7)
+    temple (0.10.4)
     thor (1.4.0)
     thruster (0.1.16)
     thruster (0.1.16-x86_64-linux)
+    tilt (2.6.1)
     timeout (0.4.4)
     tsort (0.2.0)
     turbo-rails (2.0.20)
@@ -315,6 +337,7 @@ GEM
       base64
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
+    yard (0.9.37)
     zeitwerk (2.7.3)
 
 PLATFORMS
@@ -326,14 +349,19 @@ DEPENDENCIES
   brakeman
   cssbundling-rails
   debug
+  hamlit
+  hamlit-rails
   jbuilder
   jsbundling-rails
   kamal
   pg (~> 1.1)
   propshaft
+  pry
+  pry-doc
   puma (>= 5.0)
   rails (~> 8.0.4)
   rubocop-rails-omakase
+  simple_form
   solid_cable
   solid_cache
   solid_queue
